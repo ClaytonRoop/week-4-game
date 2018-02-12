@@ -1,0 +1,40 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url("../images/round.png");
+}
+.btn {
+    border-width: 4px;
+}
+
+.bottomscore {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.randomScoreBody {
+    margin: auto;
+    text-align: center;
+}
+
+.randomscore {
+    text-align: center;
+}
+
+.scoretext {
+    margin: auto;
+    text-align: center;
+}
+
+.bottomscore {
+    text-align: center;
+}
+
+
+/* .header {
+    margin: auto;
+    color: green; 
+} */
+
+/* .gameTextBody {
+    background: blue;
+} */
