@@ -24,26 +24,36 @@
                 <h1>Crystal Collector</h1>
             </div>
         </div>
-
-        <div class="row gameTextrow">
+        
+        
+         <div class="row gameTextrow">
             <div class="col-sm-6 gameText">
-                <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystals below. By clickingona  crystal you will add a specific amount of points to your total score.</p>
-                <p>You win the game by batching your total score to random number, you lose the game if your total score goes above the random numner.</p>
-                <p>The value of each crystal is hidden from you until you click on it</p>
-                <p>Each tim whne the game starts, the game will change the values of each crystal.</p>
+                 <div class="panel panel-default gameTextPanel">
+                    <div class="panel-body gameTextBody">
+                        <p>You will be given a random number at the start of the game.</p>
+                        <p>There are four crystals below. By clickingona  crystal you will add a specific amount of points to your total score.</p>
+                        <p>You win the game by batching your total score to random number, you lose the game if your total score goes above the random numner.</p>
+                        <p>The value of each crystal is hidden from you until you click on it</p>
+                        <p>Each tim whne the game starts, the game will change the values of each crystal.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row gamescorerow">
-            <div class="col-sm-1 gamescore">
-                <h1 class ="randomscore"> 0 </h1>
+            <div class="col-sm-2 gamescore">
+                <div class="panel panel-default randomScorePanel">
+                    <div class="panel-body randomScoreBody">
+                        <h5 class = "scoretext"> Match this score:</h5>
+                        <h1 class ="randomscore"> 0 </h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                 <h2 class = "h2winloss"></h2>
                 <p class = "winloss"></p>
-                <p class="wins"> Wins: 0 </p>
-                <p class="losses"> Losses: 0</p>
+                <h4 class="wins"> Wins: 0 </h4>
+                <h4 class="losses"> Losses: 0</h4>
             </div>
         </div>
        

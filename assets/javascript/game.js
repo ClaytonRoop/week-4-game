@@ -9,6 +9,7 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     var newTotal = 0;
+    var gameOver = true;
 
     var gemArray = [];
 
@@ -57,6 +58,8 @@ $(document).ready(function () {
         $(".userscore").text(playerScore);
 
         $(".h2winloss").text("");
+
+        gameOver = true;
     }
     
         // for (i = 1; i < 5; i++) {
@@ -76,13 +79,14 @@ $(document).ready(function () {
 
     // console.log(gemArray);
     function clickInitiated(result) {
-        if (result < randomNumber) {
+        if (result < randomNumber || gameOver === false) {
             return;
         } else if (result > randomNumber) {
             losses++
             $(".h2winloss").text("You Lost!")
             $(".winloss").text("You Lost Your Last Game!");
             $(".losses").text("Losses: " + losses);
+            gameOver = false;
             // alert("You lose!");
 
             setTimeout(function () {
@@ -95,43 +99,39 @@ $(document).ready(function () {
             $(".h2winloss").text("You Win!")
             $(".winloss").text("You Won Your Last Game!");
             $(".wins").text("Wins: " + wins);
+            gameOver = false;
             // alert("You win");
             
             setTimeout(function () {
                 clearAll();
-                
             }, 1200); 
         }
     }
 
-    $(".emeraldbutton").on("click", function () {
-         playerScore += emerald;
+    function clickbutton(gem) {
+        if (gameOver !== false){ 
+        playerScore += gem;
         $(".userscore").text(playerScore);
         clickInitiated(playerScore);
-       
+        }
+
+    }
+
+    
+    $(".emeraldbutton").on("click", function () {
+        clickbutton (emerald); 
     });
 
     $(".rubybutton").on("click", function () {
-        playerScore += ruby;
-        $(".userscore").text(playerScore);
-        clickInitiated(playerScore);
-       
-
+        clickbutton(ruby);
     });
 
     $(".diamondbutton").on("click", function () {
-        playerScore += diamond;
-        $(".userscore").text(playerScore);
-        clickInitiated(playerScore);
-        
-
+        clickbutton(diamond);
     });
 
     $(".sapphirebutton").on("click", function () {
-        playerScore += sapphire;
-        $(".userscore").text(playerScore);
-        clickInitiated(playerScore);
-        
+        clickbutton(sapphire);
     });
 
 });
